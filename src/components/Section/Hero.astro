@@ -1,0 +1,128 @@
+---
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";  
+import GitHub from "@/icons/Github.astro";
+import Wattpad from "@/icons/Wattpad.astro";
+import Instagram from "@/icons/Instagram.astro";
+import Youtube from "@/icons/Youtube.astro";
+
+
+const {name, label, image, location, profiles, email} = basics;
+const {region, province} = location;
+
+const SOCIAL: Record<string, any> ={
+    GitHub, 
+    Wattpad,
+    Instagram,
+    Youtube
+}
+
+---
+
+<Section>
+    <div class="container">
+
+        <div class="info">
+            <h1>{name}</h1>
+            <h3>{label}</h3>
+            <span>
+                🌐{region}, {province}
+            </span>
+            
+        <footer>
+            {
+                email &&(
+                    <a href={'mailto:${email}'}
+                    title={'Enviar un coreo electronico a ${name} al correo ${email}'}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        <Mail />
+                    </a>
+                )
+            }
+{
+    profiles.map(({network, url, username}) => {
+        const ICON = SOCIAL[network]
+        return(
+            <a href={url}>
+                <ICON/>
+            </a>
+        )
+    })
+}
+            
+        </footer>    
+        </div>
+        
+        <figure>
+            <img src={image} alt={name}>
+        </figure>
+    </div>
+</Section>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        gap: 1em;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        font-size: 17px;
+        padding: 30px;
+        text-wrap: pretty; 
+        line-height: 1.5;
+        padding: 9px;
+        
+	
+    }
+
+    span{
+        color: #000000;
+        margin: 8px 9px 9px 9px;
+        align-items: center;
+        display: flex;
+        gap: 0.25rem;
+        font-size: 0.85rem;
+        letter-spacing: -0.05rem;
+    }
+    
+    img{
+        margin-left: 65px;
+        width: 90%;
+        border-radius: 20%;
+        /* -webkit-box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75);
+        -moz-box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75);
+        box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75); */
+    }
+    
+    footer{
+        display: flex;
+        gap: 0.32rem;
+    }
+
+    footer>a{
+        border: 1px solid #b7a7a7;
+        border-radius: 20%;
+        display: inline-flex;
+        justify-items: center;
+        padding: 4px;
+        color: black;
+        
+        
+    }
+    a:hover{
+        border: 1px solid #877f7f;
+        background: #b7a7a7;
+        
+    }
+    h3{
+        font-weight: 400;
+    }
+</style>

@@ -1,0 +1,42 @@
+---
+import Section from "@/components/Section.astro"
+
+import {work} from "@cv"
+
+---
+<Section title="Expetiencia">
+    <div class="conatiner">
+        <ul>
+            {work.map(({name, position, date, summary}) =>{
+             return(
+                        <article>
+                    <li>
+                            <header>
+                                <h3>{name}</h3>
+                                <h4>{position}</h4>
+                            </header>
+                        <h5>{date}</h5>
+                        <footer>
+                            <p>{summary}</p>
+                        </footer>
+
+                    </li>
+                        </article>
+                )
+            }
+                
+        )}
+        </ul>
+    </div>
+</Section>
+
+<style>
+    li{
+        line-height: 1.5;
+    }
+
+    h4, h5{
+        font-weight: 500;
+        color: rgb(114, 114, 114);
+    }
+</style>

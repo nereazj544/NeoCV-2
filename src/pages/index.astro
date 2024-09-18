@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Card from '../components/Card.astro';
+import Experiencia from "@/components/Section/Experiencia.astro";
+import About from "@/components/Section/About.astro";
+import Hero from "@/components/Section/Hero.astro";
+import Projectos from "@/components/Section/Projectos.astro";
+import Skills from "@/components/Section/Skills.astro";
+import Educacion from "@/components/Section/Educacion.astro";
+import KeyBoardManager from "@/components/Keyboardmanager.astro";
+---
+
+<Layout title="NEO CV">
+	<main>
+		<Hero />
+		<About />
+		<Educacion />
+		<Experiencia />
+		<Skills />
+		<Projectos />
+	</main>
+	<KeyBoardManager />
+</Layout>
+
+<style>
+	main {
+		padding: 4rem;
+		margin: auto;
+		width: 100%;
+	}
+	@media (width <= 700px) {
+		main {
+			padding: 2rem;
+		}
+	}
+</style>

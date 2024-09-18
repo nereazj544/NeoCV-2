@@ -1,0 +1,144 @@
+{
+    "basics": {
+        "name": "Neo",
+        "label": "Ironicamente me he dado cuenta de que me gusta más diseñar que programar",
+        "image": "/me.jpeg",
+        "email": "virtualsnzj@gmail.com",
+        "phone": "+34 ",
+        "summary": "No sé que poner aqui",
+        "location": {
+            "province": "Asturias",
+            "countryCode": "ES",
+            "region": "España"
+        },
+        "profiles": [
+            {
+                "network": "Instagram",
+                "username": "_soyneokurai_13",
+                "url": "https://www.instagram.com/_soyneokurai_13/"
+            },
+            {
+                "network": "Wattpad",
+                "username": "akirakurai13",
+                "url": "https://www.wattpad.com/user/akirakurai13"
+            },
+            {
+                "network": "Youtube",
+                "username": "akirakurai13",
+                "url": "https://www.youtube.com/@soyneokurai1939"
+            },
+            {
+                "network": "GitHub",
+                "username": "nereazj544",
+                "url": "https://github.com/nereazj544"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Asturnorte",
+            "position": "Taller de tienda reparacion de equipos",
+            "date": "Practicas de 3 meses: Abril-Junio",
+            "summary": "Mantenimiento y reparacion de equipos. Configuracion y actualización de sistemas operativos y aplicaciones."
+        }
+    ],
+    "education": [
+        {
+            "institution": "IES Perez de Ayala",
+            "area": "Educacion Secudnaria Obligatoria",
+            "studyType": "ESO",
+            "startDate": "2016",
+            "endDate": "2020"
+        },
+        {
+            "institution": "IES Monte Naranco",
+            "area": "Sistemas Microinformaticos y Redes ",
+            "studyType": "Formacion Profesional Grado medio",
+            "startDate": "2020",
+            "endDate": "2022"
+        },
+        {
+            "institution": "IES Doctor Fleming",
+            "area": "Desarrollo de aplicaciones moviles y multiplataformas",
+            "studyType": "Formacion Profesional Grado Superior ",
+            "startDate": "2022",
+            "endDate": ""
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Pasaporte de Seguridad: Certificado de nivel básico en prevención de riesgos laborales",
+            "emitido": "Instituto Asturiano de Prevención Riesgos Laborales",
+            "fecha de emision": "Noviembre 2021",
+            "Horas": "50 Horas"
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML"
+        },
+        {
+            "name": "CSS"
+        },
+        {
+            "name": "Tailwind"
+        },
+        {
+            "name": "TypeScript"
+        },
+        {
+            "name": "Java"
+        },
+        {
+            "name": "MySQL"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Spanish",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "English",
+            "fluency": "B1"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": [
+                "Ferrets",
+                "Unicorns"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference…"
+        }
+    ],
+    "projects": [
+        {
+            "name": "mars.codes",
+            "isActive": true,
+            "description": "Historia interactiva con retos de programación para viajar a Marte",
+            "highlights": [
+                "Elige tu propia aventura",
+                "En desarrollo"
+            ],
+            "url": "https://mars.codes"
+        },
+        {
+            "name": "AdventJS",
+            "isActive": true,
+            "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+            "highlights": [
+                "+1 millón de visitas",
+                "Multidioma",
+                "JavaScript & TypeScript"
+            ],
+            "url": "https://adventjs.dev"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+---
+import Section from "@/components/Section.astro"
+
+import {basics} from "@cv"
+const {summary } = basics
+---
+<Section title="About">
+    <div class="conatiner">
+        <p>{summary}</p>
+    </div>
+</Section>
+
+
+<style>
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        gap: 1em;
+    }
+    </style>
