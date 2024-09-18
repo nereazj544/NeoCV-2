@@ -18,31 +18,42 @@ const SOCIAL: Record<string, any> ={
     Youtube
 }
 
+const GitHubInfo = profiles.find(({network}) => network == "GitHub")
+const GitUrl = GitHubInfo?.url
+
+const PrintInfo = [email, GitUrl].filter(Boolean).join(" || ")
 ---
 
 <Section>
     <div class="container">
 
         <div class="info">
+            <figure>
+            <img src={image} alt={name}>
+        </figure>
             <h1>{name}</h1>
             <h3>{label}</h3>
             <span>
                 🌐{region}, {province}
             </span>
-            
-        <footer>
-            {
-                email &&(
-                    <a href={'mailto:${email}'}
-                    title={'Enviar un coreo electronico a ${name} al correo ${email}'}
-                    target="_blank"
-                    rel="noopener noreferrer">
+            <footer class="print">
+                    {PrintInfo}
+                </div>
+            </footer>
+        <footer class="no-print">
+
+                {
+                    email &&(
+                        <a href={'mailto:${email}'}
+                        title={'Enviar un coreo electronico a ${name} al correo ${email}'}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <Mail />
                     </a>
                 )
             }
-{
-    profiles.map(({network, url, username}) => {
+        {
+        profiles.map(({network, url, username}) => {
         const ICON = SOCIAL[network]
         return(
             <a href={url}>
@@ -50,14 +61,12 @@ const SOCIAL: Record<string, any> ={
             </a>
         )
     })
-}
+    }
             
         </footer>    
         </div>
         
-        <figure>
-            <img src={image} alt={name}>
-        </figure>
+        
     </div>
 </Section>
 
@@ -79,14 +88,11 @@ const SOCIAL: Record<string, any> ={
         text-wrap: pretty; 
         line-height: 1.5;
         padding: 9px;
-        
-	
     }
 
     span{
         color: #000000;
         margin: 8px 9px 9px 9px;
-        align-items: center;
         display: flex;
         gap: 0.25rem;
         font-size: 0.85rem;
@@ -94,17 +100,16 @@ const SOCIAL: Record<string, any> ={
     }
     
     img{
-        margin-left: 65px;
-        width: 90%;
+        width: 20%;
         border-radius: 20%;
-        /* -webkit-box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75);
-        -moz-box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75);
-        box-shadow: 0px .9px 70px 0px rgba(243, 14, 14, 0.75); */
+        margin-inline: 110%;
+        margin-top: 2%;
     }
     
     footer{
         display: flex;
         gap: 0.32rem;
+        margin-right: 10%;
     }
 
     footer>a{
@@ -114,7 +119,6 @@ const SOCIAL: Record<string, any> ={
         justify-items: center;
         padding: 4px;
         color: black;
-        
         
     }
     a:hover{

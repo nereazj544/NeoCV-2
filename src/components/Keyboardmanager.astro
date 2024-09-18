@@ -1,0 +1,81 @@
+---
+import GitHub from "@/icons/Github.astro";
+import { basics } from "@cv";
+const {profiles} = basics
+
+const SOCIAL_ICON: Record<string, any> = {
+GitHub
+}
+
+const profileInfo = profiles.map(({network, url}) =>
+{
+    const icon = SOCIAL_ICON[network] 
+    return{
+        network,
+        url,
+        icon
+    }
+})
+---
+
+
+<footer>
+    Pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir la paleta de comando.
+</footer>
+<ninja-keys
+placeholder="buscar comando" hideBreadcrumbs></ninja-keys>
+<script>
+    import "ninja-keys"
+
+    const ninja = document.querySelector("ninja-keys")
+    if (ninja != null) {
+        ninja.data = [
+    {
+      id: 'Print',
+      title: 'Imprimir 🖨️',
+      hotkey: 'ctrl+P',
+      section: 'Acciones',
+      handler: () => {
+        window.print()
+      },
+    }]
+    }
+</script>
+
+<style>
+    @media print{
+		ninja-keys{
+			display: none !important;
+		}
+        footer{
+            display: none !important;
+        }
+	}
+    @keyframes fadeIn {}
+    footer{
+        background-color: rgb(171, 237, 237);
+        position: fixed;
+        border-top: 1px beige solid;
+        bottom: 0px;
+        text-align: center;
+        width: 100%;
+        padding-block: 8px;
+        font-weight: 900;
+
+        view-timeline-name: --revealing;
+        view-timeline-axis: block;
+
+        animation: fadeIn 0.3s linear;
+        animation-timeline: --revealing;
+        animation-range: entry 100% cover 10%;
+
+    }
+
+    kbd{
+        background: #666;
+        padding: 2px;
+        color: white;
+    }
+
+   
+</style>

@@ -1,7 +1,48 @@
 ---
 import Section from "../Section.astro";
-
+import {projects} from "@cv"
 ---
 <Section title="Proyectos">
-
+    <ul>
+        {
+            projects.map(({url, name, isActive, description}) => {
+                return(
+                    <li>
+                        <article>
+                            <header>
+                                <a href={url}
+                                title={'ver el proyecto ${name}'}>
+                                    <h4>{name}</h4>
+                                </a>
+                                <p>{description}</p>
+                            </header>
+                        </article>
+                    </li>
+                )
+            })
+        }
+    </ul>
 </Section>
+
+<style>
+    ul{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        );
+        gap: 1rem;
+    }
+    a{
+        color:black;
+    }
+    article{
+        border-radius: 10%;
+        padding: 5%;
+        border: 1px solid #666;
+    }
+    article>p{
+        font-size: 4rem;
+    }
+</style>

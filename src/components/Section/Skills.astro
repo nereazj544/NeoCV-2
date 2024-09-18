@@ -8,9 +8,30 @@ import { skills } from  "@cv"
     <ul>
         {
             skills.map(({name}) =>{
-                <li><span>{name}</span></li>
+                return(<li><span>{name}</span></li>)
             })
         }
     </ul>
 
 </Section>
+
+<style>
+    ul{
+        display: flex;
+        flex-direction: row;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+    }
+
+    li{
+        margin-top: 15px;
+        border: 1px solid #666;
+        padding: 3px;
+        font-weight: 400;
+        border-radius: 15%;
+    }
+
+    li:hover{
+        background: #66666654;
+    }
+</style>

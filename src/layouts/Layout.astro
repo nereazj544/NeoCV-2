@@ -57,4 +57,21 @@ const { title } = Astro.props;
 		text-wrap: pretty; 
 		/* de momento esto no */
 	}
+
+	
+	.print{
+		display: none !important;
+	}
+	
+	@media print{
+		.no-print{
+			display: none !important;
+			
+		}
+	}
+	@media print{
+		.print{
+			display: block !important;
+		}
+	}
 </style>

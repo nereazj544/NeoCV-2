@@ -120,25 +120,22 @@
     ],
     "projects": [
         {
-            "name": "mars.codes",
-            "isActive": true,
-            "description": "Historia interactiva con retos de programación para viajar a Marte",
-            "highlights": [
-                "Elige tu propia aventura",
-                "En desarrollo"
-            ],
-            "url": "https://mars.codes"
+            "name": "Boggle",
+            "isActive": false,
+            "description": "Proyecto de clase, uno de los juegos que añadi al proyecto que hicimos en la asignatura de: Programacion Multimedia y Dispositivos Moviles",
+            "url": "https://github.com/nereazj544/Boggle.git"
         },
         {
-            "name": "AdventJS",
-            "isActive": true,
-            "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-            "highlights": [
-                "+1 millón de visitas",
-                "Multidioma",
-                "JavaScript & TypeScript"
-            ],
-            "url": "https://adventjs.dev"
+            "name": "Modulo de Juegos",
+            "isActive": false,
+            "description": "Proyecto de clase de la asignatura ya mencionada antes, bastante orgulloso de como quedo, es cierto que hay aspectos que se deben de mejorar, pero para ser la primera pagina que hicimos con Angular bastante satisfecha de como quedo el resultado.",
+            "url": "https://github.com/nereazj544/ModulodeJuegos.git"
+        },
+        {
+            "name": "Un Poco de todo",
+            "isActive": false,
+            "description": "'Un poco de todo' es un repositorio que me puse ha hacer por verano, en este 'proyecto' (si esque se le puede llamar asi), estuve investigando nuevos lenguajes, como por ejemplo a destacar el lenguaje: C# y el framework: Astro.",
+            "url": "https://github.com/nereazj544/Unpocodetodo.git"
         }
     ]
 }

@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.9.3",
     "astro": "^4.15.7",
     "neocv-2": "file:",
+    "ninja-keys": "^1.2.2",
     "typescript": "^5.6.2"
   }
 }

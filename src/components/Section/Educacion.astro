@@ -7,11 +7,15 @@ import {education} from "@cv"
     <ul>
         {
         education.map(({institution, area, startDate, endDate, studyType}) =>{
+            // const startYear = new Date(startDate)
+            // const endYear = endDate != null ? new Date(endDate) : "Actual"
+            return(
             <li><span>{institution}</span></li>
             <li><span>{area}</span></li>
             <li><span>{studyType}</span></li>
             <li><span>{startDate}</span></li>
             <li><span>{endDate}</span></li>
+        )
         })
         
         }
