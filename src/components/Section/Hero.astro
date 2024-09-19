@@ -8,7 +8,7 @@ import Instagram from "@/icons/Instagram.astro";
 import Youtube from "@/icons/Youtube.astro";
 
 
-const {name, label, image, location, profiles, email} = basics;
+const {name, label, image, location, profiles, email, frase} = basics;
 const {region, province} = location;
 
 const SOCIAL: Record<string, any> ={
@@ -33,6 +33,7 @@ const PrintInfo = [email, GitUrl].filter(Boolean).join(" || ")
         </figure>
             <h1>{name}</h1>
             <h3>{label}</h3>
+            <p>{frase}</p>
             <span>
                 🌐{region}, {province}
             </span>
@@ -56,7 +57,8 @@ const PrintInfo = [email, GitUrl].filter(Boolean).join(" || ")
         profiles.map(({network, url, username}) => {
         const ICON = SOCIAL[network]
         return(
-            <a href={url}>
+            <a href={url}target="_blank"
+            rel="noopener noreferrer">
                 <ICON/>
             </a>
         )

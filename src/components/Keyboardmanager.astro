@@ -1,58 +1,68 @@
 ---
 import GitHub from "@/icons/Github.astro";
 import { basics } from "@cv";
-const {profiles} = basics
+const { profiles } = basics;
 
-const SOCIAL_ICON: Record<string, any> = {
-GitHub
-}
+// const SOCIAL_ICON: Record<string, any> = {
+//     GitHub,
+// };
 
-const profileInfo = profiles.map(({network, url}) =>
-{
-    const icon = SOCIAL_ICON[network] 
-    return{
-        network,
-        url,
-        icon
-    }
-})
+// const profileInfo = profiles.map(({ network, url }) => {
+//     const icon = SOCIAL_ICON[network];
+//     const firstLetter = network[0].toUpperCase();
+
+//     return {
+//         id: network,
+//         section: "Social",
+//         title: `Visitar ${network}`,
+//         url,
+//         icon,
+//         hotkey: `ctrl+${firstLetter}`,
+//     };
+// });
 ---
-
 
 <footer>
     Pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir la paleta de comando.
 </footer>
-<ninja-keys
-placeholder="buscar comando" hideBreadcrumbs></ninja-keys>
+<ninja-keys placeholder="buscar comando" hideBreadcrumbs></ninja-keys>
 <script>
-    import "ninja-keys"
+    import "ninja-keys";
 
-    const ninja = document.querySelector("ninja-keys")
+    const ninja = document.querySelector("ninja-keys");
     if (ninja != null) {
         ninja.data = [
-    {
-      id: 'Print',
-      title: 'Imprimir 🖨️',
-      hotkey: 'ctrl+P',
-      section: 'Acciones',
-      handler: () => {
-        window.print()
-      },
-    }]
+            {
+                id: "Print",
+                title: "Imprimir 🖨️",
+                hotkey: "ctrl+P",
+                section: "Acciones",
+                handler: () => {
+                    window.print();
+                },
+            },
+        ];
     }
 </script>
 
 <style>
-    @media print{
-		ninja-keys{
-			display: none !important;
-		}
-        footer{
+    @media print {
+        ninja-keys {
             display: none !important;
         }
-	}
-    @keyframes fadeIn {}
-    footer{
+        footer {
+            display: none !important;
+        }
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    footer {
         background-color: rgb(171, 237, 237);
         position: fixed;
         border-top: 1px beige solid;
@@ -65,17 +75,14 @@ placeholder="buscar comando" hideBreadcrumbs></ninja-keys>
         view-timeline-name: --revealing;
         view-timeline-axis: block;
 
-        animation: fadeIn 0.3s linear;
+        animation: linear 0.3s fadeIn;
         animation-timeline: --revealing;
         animation-range: entry 100% cover 10%;
-
     }
 
-    kbd{
+    kbd {
         background: #666;
         padding: 2px;
         color: white;
     }
-
-   
 </style>

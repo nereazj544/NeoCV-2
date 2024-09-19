@@ -1,11 +1,12 @@
 {
     "basics": {
         "name": "Neo",
-        "label": "Ironicamente me he dado cuenta de que me gusta más diseñar que programar",
+        "frase": "Ironicamente me he dado cuenta de que me gusta más diseñar que programar.",
+        "label": "Tecnico en redes, instalador-reparador de equipos informaticos.",
         "image": "/me.jpeg",
         "email": "virtualsnzj@gmail.com",
         "phone": "+34 ",
-        "summary": "No sé que poner aqui",
+        "summary": "Bueno, voy a ser directa, no sé muy bien hablar sobre mi, es una de las cosas que no tengo. Pese a que en mis momentos libres una de mis actividades sea la escritura. Hablando más a fondo en el tema de la informatica una cosa que más me encanta es abrir, 'disecionar' los ordenadores por dentro, es una de las cosas que siempre me han gustado es decir, a mi me gusta abrir un ordenaro que tratar de programar una aplicacion. Pero, es cierto, que en la FP media de Sistemas Microinformaticos y Redes teniamos un modulo en segundo que era desarrollar sitios web y ahí, querido lector, es donde nació mi amor por HTML y CSS. A parte de tambien gustarme bastante un programa que usabamos en una de las asignaturas que era para desarrollar una red de redes; para ser más exactos: 'cisco packet tracer', es cierto, llevo un par de años sin usarlo. Despues de acabar el grado medio, me meti a un grado superior, en esta nueva etapa me di cuenta de varias cosas: la primera, como mencione arriba, el diseño es una de las cosas que más me encanta, la segunda es que mis habilidades como progradora estan un poco en la cuerda floja. Pero, no me he rendido aún es cierto, tengo matizes que corregir pero espero que con el tiempo sea bastante bueno a la hora de enfrentarme a los problemas relacionados con programacion.",
         "location": {
             "province": "Asturias",
             "countryCode": "ES",
@@ -62,18 +63,21 @@
             "area": "Desarrollo de aplicaciones moviles y multiplataformas",
             "studyType": "Formacion Profesional Grado Superior ",
             "startDate": "2022",
-            "endDate": ""
+            "endDate": null
         }
     ],
     "certificates": [
         {
             "name": "Pasaporte de Seguridad: Certificado de nivel básico en prevención de riesgos laborales",
             "emitido": "Instituto Asturiano de Prevención Riesgos Laborales",
-            "fecha de emision": "Noviembre 2021",
-            "Horas": "50 Horas"
+            "fecha": "Noviembre 2021",
+            "horas": "50 Horas"
         }
     ],
     "skills": [
+        {
+            "name": "Photoshop"
+        },
         {
             "name": "HTML"
         },
@@ -84,22 +88,34 @@
             "name": "Tailwind"
         },
         {
+            "name": "cisco packet tracer"
+        },
+        {
             "name": "TypeScript"
         },
         {
             "name": "Java"
         },
         {
-            "name": "MySQL"
+            "name": "MySQL/SqLite"
+        },
+        {
+            "name": "MongoDB"
+        },
+        {
+            "name": "C#"
+        },
+        {
+            "name": "Astro / Angular"
         }
     ],
     "languages": [
         {
-            "language": "Spanish",
+            "language": "Español",
             "fluency": "Nativo"
         },
         {
-            "language": "English",
+            "language": "Inglés",
             "fluency": "B1"
         }
     ],
